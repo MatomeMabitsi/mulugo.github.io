@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulugo Day Care Centre - Parent Handbook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --light-green: #4CAF50;
+            --bright-green: #8BC34A;
+            --warm-yellow: #FFC107;
+            --gold-yellow: #FFB300;
+            --soft-yellow: #FFF9C4;
+            --cream: #FFFDE7;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --dark-text: #333333;
+            --medium-text: #555555;
+            --border-color: #E0E0E0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Fredoka One', cursive;
+            font-weight: normal;
+            color: var(--primary-green);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--warm-yellow), var(--gold-yellow));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .logo-img img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .logo-text h1 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        nav a:hover {
+            background-color: var(--warm-yellow);
+            color: var(--primary-green);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(76, 175, 80, 0.9)), url('pic1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 0 var(--primary-green);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-slogan {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 25px 0;
+            color: var(--warm-yellow);
+            text-shadow: 1px 1px 0 var(--primary-green);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--warm-yellow), var(--gold-yellow));
+            color: var(--primary-green);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 0 var(--light-green);
+            border: 2px solid transparent;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 0 var(--light-green);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary-green);
+            box-shadow: 0 4px 0 var(--warm-yellow);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 6px 0 var(--warm-yellow);
+        }
+        
+        /* Section Common Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 6px;
+            background: linear-gradient(to right, var(--warm-yellow), var(--gold-yellow));
+            margin: 15px auto;
+            border-radius: 3px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--medium-text);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--medium-text);
+        }
+        
+        .contact-info-box {
+            background: linear-gradient(135deg, var(--soft-yellow), var(--light-gray));
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--bright-green);
+            margin-top: 30px;
+        }
+        
+        .contact-info-box h4 {
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+        
+        .contact-info-box p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-info-box i {
+            color: var(--bright-green);
+            width: 20px;
+        }
+        
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 15px 15px 0 var(--bright-green);
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover {
+            transform: translateY(-10px);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Vision Mission Section */
+        .vision-mission {
+            background: linear-gradient(135deg, var(--light-green), var(--bright-green));
+            color: white;
+        }
+        
+        .vision-mission .section-title {
+            color: white;
+        }
+        
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .vision-card, .mission-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .vision-card h3, .mission-card h3 {
+            color: var(--warm-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .vision-card h3 i, .mission-card h3 i {
+            font-size: 2rem;
+        }
+        
+        /* Philosophy Section */
+        .philosophy {
+            background-color: var(--white);
+        }
+        
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .philosophy-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--bright-green);
+        }
+        
+        .philosophy-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .philosophy-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-card h4 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Programs Section */
+        .programs {
+            background: linear-gradient(135deg, var(--light-gray), var(--soft-yellow));
+        }
+        
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .program-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .program-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .program-header h3 {
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        
+        .age-badge {
+            background: var(--warm-yellow);
+            color: var(--primary-green);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .program-content {
+            padding: 25px;
+        }
+        
+        .program-content p {
+            margin-bottom: 15px;
+            color: var(--medium-text);
+        }
+        
+        .program-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .program-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .program-features li i {
+            color: var(--bright-green);
+        }
+        
+        /* Daily Schedule Section */
+        .schedule {
+            background-color: var(--white);
+        }
+        
+        .schedule-container {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        .schedule-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .schedule-header h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        
+        .schedule-item {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .schedule-item:nth-child(odd) {
+            background-color: var(--soft-yellow);
+        }
+        
+        .time-badge {
+            background: var(--warm-yellow);
+            color: var(--primary-green);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .schedule-item h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        /* Health Safety Section */
+        .health-safety {
+            background: linear-gradient(135deg, var(--light-green), var(--bright-green));
+            color: white;
+        }
+        
+        .health-safety .section-title {
+            color: white;
+        }
+        
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .safety-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .safety-icon {
+            font-size: 3rem;
+            color: var(--warm-yellow);
+            margin-bottom: 20px;
+        }
+        
+        .safety-card h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Enrollment Section */
+        .enrollment {
+            background-color: var(--white);
+        }
+        
+        .enrollment-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .step-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            position: relative;
+            border-top: 5px solid var(--bright-green);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-green);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .step-card h4 {
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Fees Section */
+        .fees {
+            background: linear-gradient(135deg, var(--light-gray), var(--soft-yellow));
+        }
+        
+        .fees-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .fees-table th {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .fees-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .fees-table tr:nth-child(even) {
+            background-color: var(--soft-yellow);
+        }
+        
+        .fees-table tr:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .highlight {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+        
+        /* Parent Involvement Section */
+        .parent-involvement {
+            background-color: var(--white);
+        }
+        
+        .involvement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .involvement-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--warm-yellow);
+        }
+        
+        .involvement-card h4 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .involvement-card h4 i {
+            color: var(--bright-green);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+        }
+        
+        .contact .section-title {
+            color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .contact-info h3 {
+            color: var(--warm-yellow);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--warm-yellow);
+            width: 30px;
+        }
+        
+        .hours {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .hours h4 {
+            margin-bottom: 15px;
+            color: var(--warm-yellow);
+            font-size: 1.3rem;
+        }
+        
+        .hours ul {
+            list-style: none;
+        }
+        
+        .hours li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .map {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            height: 100%;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--warm-yellow);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--warm-yellow);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--warm-yellow);
+            transform: translateY(-5px);
+            color: var(--primary-green);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content, .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-slogan {
+                font-size: 1.5rem;
+            }
+            
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Handbook Notice */
+        .handbook-notice {
+            background: linear-gradient(135deg, var(--warm-yellow), var(--gold-yellow));
+            color: var(--primary-green);
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .handbook-notice a {
+            color: var(--primary-green);
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="logo.png" alt="Mulugo Day Care Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Mulugo Day Care Centre</h1>
+                        <p>Protea Glen Ext 13, Soweto</p>
+                    </div>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#vision">Vision & Mission</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#schedule">Daily Schedule</a></li>
+                        <li><a href="#enrollment">Enrollment</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Mulugo Day Care Centre</h2>
+                <p>A warm, nurturing, and stimulating environment where children explore, learn, and grow</p>
+                <div class="hero-slogan">Building Foundations for Lifelong Learning</div>
+                <div>
+                    <a href="#contact" class="btn">Enrol Now</a>
+                    <a href="#programs" class="btn btn-secondary">View Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Mulugo Day Care Centre</h2>
+            <p class="section-subtitle animate-on-scroll">Providing exceptional early childhood education since our establishment</p>
+            
+            <div class="handbook-notice animate-on-scroll">
+                This website summarizes key information from the official <strong>Mulugo Day Care Centre Parent Handbook 2025-2026</strong>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3>Nurturing Young Minds in Protea Glen</h3>
+                    <p>We are delighted to welcome you and your child to <strong>Mulugo Day Care Centre.</strong> Our preschool is dedicated to providing a warm, nurturing, and stimulating environment where children can explore, learn, and grow.</p>
+                    <p>We believe that early childhood education lays the foundation for a lifetime of curiosity, creativity, and academic success. At Mulugo Day Care Centre, we emphasize a play-based, child-centered approach that fosters both intellectual and emotional development.</p>
+                    <p>Our dedicated teachers and staff work closely with families to create a supportive learning community that nurtures each child's unique potential.</p>
+                    
+                    <div class="contact-info-box">
+                        <h4>Centre Information</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 14444/44 Mogohlo Street, Protoa Glen Ext 13, Soweto, 1818</p>
+                        <p><i class="fas fa-phone"></i> <strong>Contact:</strong> 073 838 3751</p>
+                        <p><i class="fas fa-user-tie"></i> <strong>Principal:</strong> Irene Merukaduvha</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> Mulugodaycare@gmail.com</p>
+                    </div>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <img src="pic2.jpg" alt="Children at Mulugo Day Care Centre">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission" id="vision">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Our Vision & Mission</h2>
+            
+            <div class="vision-mission-grid">
+                <div class="vision-card animate-on-scroll">
+                    <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                    <p>We envision a nurturing and inspiring learning environment where young children develop a lifelong love for learning. We aim to cultivate curiosity, creativity, and confidence in every child, preparing them for future academic and social success.</p>
+                </div>
+                
+                <div class="mission-card animate-on-scroll">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>Our mission is to provide a safe, inclusive, and stimulating early childhood education that fosters the intellectual, emotional, and physical development of each child.</p>
+                    <ul style="list-style: none; padding: 20px 0 0 0;">
+                        <li style="padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--warm-yellow);"></i>
+                            Encourage independent thinking and problem-solving skills
+                        </li>
+                        <li style="padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--warm-yellow);"></i>
+                            Support the social and emotional growth of children
+                        </li>
+                        <li style="padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--warm-yellow);"></i>
+                            Foster creativity and imagination through hands-on learning
+                        </li>
+                        <li style="padding: 8px 0; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-check-circle" style="color: var(--warm-yellow);"></i>
+                            Partner with families to create a strong homeschool connection
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Philosophy Section -->
+    <section class="philosophy">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Our Educational Philosophy</h2>
+            <p class="section-subtitle animate-on-scroll">We believe children learn best through play, exploration, and guided discovery</p>
+            
+            <div class="philosophy-grid">
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4>Play-Based Learning</h4>
+                    <p>Encourages active engagement, joyful learning, and builds foundational skills in literacy, numeracy, and social interaction</p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Social-Emotional Development</h4>
+                    <p>Teaches children how to express emotions, communicate effectively, and promotes empathy, cooperation, and self-regulation</p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h4>Hands-On Exploration</h4>
+                    <p>Provides sensory-rich experiences through arts, music, science, and nature activities to encourage creativity and innovation</p>
+                </div>
+                
+                <div class="philosophy-card animate-on-scroll">
+                    <div class="philosophy-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Early Literacy & Language</h4>
+                    <p>Focuses on developing communication skills, vocabulary building, and early reading readiness through interactive activities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Our Programs</h2>
+            <p class="section-subtitle animate-on-scroll">Age-specific programs designed to support developmental milestones</p>
+            
+            <div class="program-cards">
+                <!-- Toddler Class -->
+                <div class="program-card animate-on-scroll">
+                    <div class="program-header">
+                        <h3>Toddler Class</h3>
+                        <div class="age-badge">18 months - 3 years</div>
+                    </div>
+                    <div class="program-content">
+                        <p>Focuses on early socialization, sensory exploration, and foundational motor skills. Activities include music, movement, hands-on exploration, and simple routines to build independence.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Sensory play activities</li>
+                            <li><i class="fas fa-check"></i> Basic motor skills development</li>
+                            <li><i class="fas fa-check"></i> Early socialization</li>
+                            <li><i class="fas fa-check"></i> Music and movement sessions</li>
+                        </ul>
+                        <div style="margin-top: 20px; padding: 10px; background: var(--soft-yellow); border-radius: 8px; text-align: center;">
+                            <strong>Teacher-Student Ratio:</strong> 1:6
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Preschool Class -->
+                <div class="program-card animate-on-scroll">
+                    <div class="program-header">
+                        <h3>Preschool Class</h3>
+                        <div class="age-badge">3 - 4 years</div>
+                    </div>
+                    <div class="program-content">
+                        <p>Encourages language development, cooperative play, and problem solving. Introduces early literacy, numeracy, and creative arts through play-based learning.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Language development activities</li>
+                            <li><i class="fas fa-check"></i> Cooperative play and sharing</li>
+                            <li><i class="fas fa-check"></i> Introduction to literacy and numeracy</li>
+                            <li><i class="fas fa-check"></i> Creative arts and crafts</li>
+                        </ul>
+                        <div style="margin-top: 20px; padding: 10px; background: var(--soft-yellow); border-radius: 8px; text-align: center;">
+                            <strong>Teacher-Student Ratio:</strong> 1:10
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pre-K Class -->
+                <div class="program-card animate-on-scroll">
+                    <div class="program-header">
+                        <h3>Pre-Kindergarten (Pre-K) Class</h3>
+                        <div class="age-badge">4 - 5 years</div>
+                    </div>
+                    <div class="program-content">
+                        <p>Prepares children for kindergarten readiness by enhancing cognitive, motor, and social skills. Engages students in structured activities, group discussions, and hands-on experiments.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Kindergarten readiness preparation</li>
+                            <li><i class="fas fa-check"></i> Structured learning activities</li>
+                            <li><i class="fas fa-check"></i> Group discussions and problem-solving</li>
+                            <li><i class="fas fa-check"></i> Hands-on science experiments</li>
+                        </ul>
+                        <div style="margin-top: 20px; padding: 10px; background: var(--soft-yellow); border-radius: 8px; text-align: center;">
+                            <strong>Teacher-Student Ratio:</strong> 1:12
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Approach Section -->
+    <section class="vision-mission">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Our Curriculum Approach</h2>
+            <p class="section-subtitle animate-on-scroll" style="color: rgba(255,255,255,0.9);">Integrating research-backed early childhood education frameworks</p>
+            
+            <div class="vision-mission-grid">
+                <div class="vision-card animate-on-scroll">
+                    <h3><i class="fas fa-palette"></i> The Creative Curriculum</h3>
+                    <p>Fostering exploration and discovery through hands-on experiences that engage children's natural curiosity and creativity.</p>
+                </div>
+                
+                <div class="mission-card animate-on-scroll">
+                    <h3><i class="fas fa-child"></i> Montessori Principles</h3>
+                    <p>Encouraging independence and self-directed learning through carefully prepared environments that support individual development.</p>
+                </div>
+                
+                <div class="vision-card animate-on-scroll">
+                    <h3><i class="fas fa-users"></i> Reggio Emilia Approach</h3>
+                    <p>Promoting creativity, collaboration, and critical thinking through project-based learning and documentation of children's work.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; text-align: center;">
+                <h3 style="color: var(--warm-yellow); margin-bottom: 20px;">Key Developmental Areas</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">Social & Emotional Development</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">Language & Literacy</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">Early Math & Problem-Solving</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">Science & Discovery</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">Fine & Gross Motor Skills</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 10px 20px; border-radius: 20px;">Creativity & Imagination</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Daily Schedule & Routine</h2>
+            <p class="section-subtitle animate-on-scroll">Consistency and structure for optimal child development</p>
+            
+            <div class="handbook-notice animate-on-scroll">
+                <strong>Operating Hours:</strong> Monday - Friday, 7:30 AM - 4:00 PM | <strong>After Care:</strong> 4:30 PM - 6:00 PM (Additional fees apply)
+            </div>
+            
+            <div class="schedule-container animate-on-scroll">
+                <div class="schedule-header">
+                    <h3>Typical Day at Mulugo Day Care Centre</h3>
+                </div>
+                
+                <div class="schedule-grid">
+                    <div class="schedule-item">
+                        <div class="time-badge">7:30 - 8:30 AM</div>
+                        <h4>Arrival & Free Play</h4>
+                        <p>Transition activities and social interaction</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">8:30 - 9:00 AM</div>
+                        <h4>Morning Circle</h4>
+                        <p>Welcome songs, calendar review, and theme discussion</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">9:00 - 10:00 AM</div>
+                        <h4>Learning Centers</h4>
+                        <p>Rotating literacy, math, art, and science stations</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">10:00 - 10:30 AM</div>
+                        <h4>Snack Time</h4>
+                        <p>Healthy snacks and hydration break</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">10:30 - 11:30 AM</div>
+                        <h4>Outdoor Play</h4>
+                        <p>Gross motor activities and team games</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">11:30 AM - 12:00 PM</div>
+                        <h4>Storytime & Music</h4>
+                        <p>Read-aloud sessions and sing-along activities</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">12:00 - 12:30 PM</div>
+                        <h4>Lunch</h4>
+                        <p>Social mealtime and table manners practice</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">12:30 - 1:30 PM</div>
+                        <h4>Nap/Rest Time</h4>
+                        <p>Quiet rest with soft music (Toddler & Preschool classes)</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">1:30 - 2:30 PM</div>
+                        <h4>Hands-On Exploration</h4>
+                        <p>STEAM, sensory play, or dramatic role-playing</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">2:30 - 3:00 PM</div>
+                        <h4>Afternoon Snack</h4>
+                        <p>Light snack before final activities</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">3:00 - 3:30 PM</div>
+                        <h4>Creative Expression</h4>
+                        <p>Arts, crafts, and self-expression activities</p>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="time-badge">3:30 - 4:00 PM</div>
+                        <h4>Reflection & Dismissal</h4>
+                        <p>Closing circle and preparation for pick-up</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health & Safety Section -->
+    <section class="health-safety">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Health & Safety Policies</h2>
+            <p class="section-subtitle animate-on-scroll" style="color: rgba(255,255,255,0.9);">Creating a safe, clean, and supportive environment for all children</p>
+            
+            <div class="safety-grid">
+                <div class="safety-card animate-on-scroll">
+                    <div class="safety-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h4>Immunization Requirements</h4>
+                    <p>All children must have up-to-date immunizations before the first day of school. Medical exemptions require approval from a licensed physician.</p>
+                </div>
+                
+                <div class="safety-card animate-on-scroll">
+                    <div class="safety-icon">
+                        <i class="fas fa-allergies"></i>
+                    </div>
+                    <h4>Nut-Free Campus</h4>
+                    <p>No peanuts, tree nuts, or nut-based products allowed. All staff are trained in allergy response and emergency procedures.</p>
+                </div>
+                
+                <div class="safety-card animate-on-scroll">
+                    <div class="safety-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h4>Daily Sanitization</h4>
+                    <p>All classrooms undergo daily sanitization of toys and surfaces. Emergency exits and safety protocols are clearly outlined for all staff.</p>
+                </div>
+                
+                <div class="safety-card animate-on-scroll">
+                    <div class="safety-icon">
+                        <i class="fas fa-thermometer"></i>
+                    </div>
+                    <h4>Illness Policy</h4>
+                    <p>Children must stay home with fever (100.4°F/38°C+), vomiting, diarrhea, unexplained rash, or contagious illness. Doctor's note required for 3+ day absences.</p>
+                </div>
+                
+                <div class="safety-card animate-on-scroll">
+                    <div class="safety-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h4>Medication Policy</h4>
+                    <p>Prescription medication requires authorization form. All medication must be in original packaging and handed directly to teachers.</p>
+                </div>
+                
+                <div class="safety-card animate-on-scroll">
+                    <div class="safety-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h4>Nutrition & Food Safety</h4>
+                    <p>School provides nutritious meals following USDA guidelines. Parents must disclose food allergies during enrollment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Section -->
+    <section class="enrollment" id="enrollment">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Enrollment Process</h2>
+            <p class="section-subtitle animate-on-scroll">Making the enrollment process smooth and transparent for all families</p>
+            
+            <div class="enrollment-steps">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h4>Application Submission</h4>
+                    <p>Parents must fill out the enrollment form and submit all required documents</p>
+                </div>
+                
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h4>Family Meeting & Tour</h4>
+                    <p>Parents and children visit the school, meet teachers, and observe the classroom environment</p>
+                </div>
+                
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h4>Admission Confirmation</h4>
+                    <p>Receive welcome package and invoice for registration fee and first tuition payment</p>
+                </div>
+            </div>
+            
+            <div class="handbook-notice animate-on-scroll" style="margin-top: 40px;">
+                <h4 style="margin-bottom: 10px;">Required Documents for Enrollment</h4>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px;">
+                    <span style="background: var(--primary-green); color: white; padding: 8px 15px; border-radius: 20px;">Completed Enrollment Form</span>
+                    <span style="background: var(--primary-green); color: white; padding: 8px 15px; border-radius: 20px;">Birth Certificate/Passport Copy</span>
+                    <span style="background: var(--primary-green); color: white; padding: 8px 15px; border-radius: 20px;">Immunization Records</span>
+                    <span style="background: var(--primary-green); color: white; padding: 8px 15px; border-radius: 20px;">Emergency Contact Information</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section class="fees">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Tuition & Fees (2025-2026)</h2>
+            <p class="section-subtitle animate-on-scroll">Flexible payment plans to accommodate families' needs</p>
+            
+            <table class="fees-table animate-on-scroll">
+                <thead>
+                    <tr>
+                        <th>Class Level</th>
+                        <th>Annual Tuition</th>
+                        <th>Monthly Plan (10 payments)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toddler Class (18m-3y)</td>
+                        <td>R 12,000</td>
+                        <td>R 1,000 per month</td>
+                    </tr>
+                    <tr>
+                        <td>Preschool Class (3-4y)</td>
+                        <td>R 10,200</td>
+                        <td>R 850 per month</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: center; background-color: var(--soft-yellow);">
+                            <strong>Tuition due on the 7th of each month for monthly plans</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div class="step-card animate-on-scroll">
+                    <h4>Additional Fees</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--border-color);">
+                            <strong>Registration Fee:</strong> R 1,000 (non-refundable, due upon acceptance)
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--border-color);">
+                            <strong>Late Payment Fee:</strong> R 50 if tuition not received by the 7th
+                        </li>
+                        <li style="padding: 8px 0;">
+                            <strong>Late Pick-Up Fee:</strong> Applied after 4:30 PM
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="step-card animate-on-scroll">
+                    <h4>After Care Program</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--border-color);">
+                            <strong>One day:</strong> R 150.00
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--border-color);">
+                            <strong>After school (4:00-6:00 PM):</strong> R 50.00
+                        </li>
+                        <li style="padding: 8px 0;">
+                            <strong>Holiday care:</strong> R 350.00
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="step-card animate-on-scroll" style="background: linear-gradient(135deg, var(--primary-green), var(--light-green)); color: white;">
+                    <h4 style="color: var(--warm-yellow);">Sibling Discount</h4>
+                    <div style="font-size: 3rem; color: var(--warm-yellow); margin: 20px 0;">10%</div>
+                    <p>Families enrolling more than one child receive a 10% discount on the second child's tuition</p>
+                </div>
+            </div>
+            
+            <div class="handbook-notice animate-on-scroll" style="margin-top: 40px;">
+                <h4 style="margin-bottom: 10px;">Banking Details</h4>
+                <p><strong>Bank:</strong> FNB | <strong>Account:</strong> 62909500656 | <strong>Name:</strong> Mulugo Day Care Creche</p>
+                <p><strong>Reference:</strong> Child's name and surname</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Involvement Section -->
+    <section class="parent-involvement">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Parent Involvement & Communication</h2>
+            <p class="section-subtitle animate-on-scroll">We recognize parents as a child's first and most important teachers</p>
+            
+            <div class="involvement-grid">
+                <div class="involvement-card animate-on-scroll">
+                    <h4><i class="fas fa-chalkboard-teacher"></i> Classroom Involvement</h4>
+                    <p>Parents can participate as guest readers, share special skills (music, cooking, art), or assist with art and science projects.</p>
+                </div>
+                
+                <div class="involvement-card animate-on-scroll">
+                    <h4><i class="fas fa-hands-helping"></i> School-Wide Volunteering</h4>
+                    <p>Opportunities include field trip chaperoning, event planning committee, and fundraising efforts (background check required).</p>
+                </div>
+                
+                <div class="involvement-card animate-on-scroll">
+                    <h4><i class="fas fa-comments"></i> Communication Channels</h4>
+                    <p>Weekly newsletters, monthly calendars, parent-teacher meetings (twice yearly or upon request), and phone support during school hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Contact Us</h2>
+            <p class="section-subtitle animate-on-scroll" style="color: rgba(255,255,255,0.9);">Get in touch to schedule a tour or learn more about enrollment</p>
+            
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p><strong>Address:</strong></p>
+                            <p>14444/44 Mogohlo Street</p>
+                            <p>Protea Glen Ext 13, Soweto</p>
+                            <p>1818</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p><strong>Phone Numbers:</strong></p>
+                            <p>073 838 3751 (Centre)</p>
+                            <p>071 818 1751 (Support)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p><strong>Email:</strong></p>
+                            <p>Mulugodaycare@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <p><strong>Principal:</strong></p>
+                            <p>Irene Merukaduvha</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hours">
+                        <h4>Operating Hours</h4>
+                        <ul>
+                            <li><span>Monday - Friday</span> <span>7:30 AM - 4:00 PM</span></li>
+                            <li><span>Morning Drop-Off</span> <span>7:30 - 8:30 AM</span></li>
+                            <li><span>Afternoon Pick-Up</span> <span>3:30 - 4:00 PM</span></li>
+                            <li><span>After Care Program</span> <span>4:30 - 6:00 PM</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="#enrollment" class="btn" style="display: block; text-align: center;">Start Enrollment Process</a>
+                    </div>
+                </div>
+                
+                <div class="map animate-on-scroll">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.6339580940995!2d27.7904165!3d-26.2780972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a5f06c52b8ab%3A0x14eca7155809245a!2sMulugo%20Daycare%20Centre!5e0!3m2!1sen!2sza!4v1698765432100!5m2!1sen!2sza" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mulugo Daycare Centre Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Mulugo Day Care Centre</h3>
+                    <p>Providing exceptional early childhood education in Protea Glen Ext 13, Soweto since our establishment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#vision">Vision & Mission</a>
+                    <a href="#programs">Programs</a>
+                    <a href="#schedule">Daily Schedule</a>
+                    <a href="#enrollment">Enrollment</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 14444/44 Mogohlo Street, Protea Glen Ext 13, Soweto, 1818</p>
+                    <p><i class="fas fa-phone"></i> 073 838 3751 (Centre)</p>
+                    <p><i class="fas fa-phone"></i> 071 818 1751 (Support)</p>
+                    <p><i class="fas fa-envelope"></i> Mulugodaycare@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 7:30 AM - 4:00 PM</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Acknowledgement</h3>
+                    <p>This website summarizes key information from the official <strong>Mulugo Day Care Centre Parent Handbook 2025-2026</strong>.</p>
+                    <p>All policies and procedures are subject to the official handbook provided to enrolled families.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Mulugo Day Care Centre. All rights reserved. | Parent Handbook 2025-2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+        
+        // Scroll Animation
+        function checkScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+        
+        // Initial check
+        checkScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkScroll);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .btn').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Highlight current section in navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
