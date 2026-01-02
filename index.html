@@ -24,6 +24,7 @@
             --dark-text: #333333;
             --medium-text: #555555;
             --border-color: #E0E0E0;
+            --whatsapp-green: #25D366;
         }
         
         * {
@@ -51,17 +52,18 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* Header Styles */
+     
         header {
             background: linear-gradient(135deg, var(--primary-green), var(--light-green));
             color: white;
-            padding: 20px 0;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+            background-color: rgba(46, 125, 50, 0.98);
         }
         
         .header-content {
@@ -70,66 +72,225 @@
             align-items: center;
         }
         
+        /* Improved Logo Design - MORE ROUND */
         .logo {
             display: flex;
             align-items: center;
             gap: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.02);
         }
         
         .logo-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
+            width: 150px;
+            height: 80px;
+            border-radius: 50%; /* More round */
             background: linear-gradient(135deg, var(--warm-yellow), var(--gold-yellow));
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: 3px solid white;
+            padding: 5px; /* Added padding for better spacing */
         }
         
         .logo-img img {
-            width: 60px;
-            height: 60px;
+            width: 100%; /* Fill the circle */
+            height: 70%;
             object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            border-radius: 50%; /* Make logo image round too */
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
         
         .logo-text h1 {
             color: white;
-            font-size: 1.8rem;
-            margin-bottom: 5px;
+            font-size: 1.7rem;
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
         }
         
         .logo-text p {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.85rem;
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
         
-        nav ul {
+        /* Improved Navigation */
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between nav and WhatsApp button */
+        }
+        
+        .nav-list {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
         }
         
-        nav a {
+        .nav-list li {
+            position: relative;
+        }
+        
+        .nav-list a {
             color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
+            padding: 10px 18px;
+            border-radius: 25px;
             transition: all 0.3s ease;
-            padding: 8px 15px;
-            border-radius: 20px;
+            display: block;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
         }
         
-        nav a:hover {
-            background-color: var(--warm-yellow);
+        .nav-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--warm-yellow), var(--gold-yellow));
+            border-radius: 25px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+        
+        .nav-list a:hover {
             color: var(--primary-green);
+            transform: translateY(-2px);
         }
         
-        .mobile-menu {
+        .nav-list a:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .nav-list a.active {
+            background: linear-gradient(135deg, var(--warm-yellow), var(--gold-yellow));
+            color: var(--primary-green);
+            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+        }
+        
+        .nav-list a.active:hover {
+            transform: translateY(0);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid white;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+        
+        .whatsapp-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .whatsapp-btn::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover::after {
+            transform: scale(1);
+        }
+        
+        .whatsapp-text {
             display: none;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
             font-size: 1.5rem;
             cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-menu-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: none; /* Hidden by default, shown on mobile */
+        }
+        
+        .floating-whatsapp .whatsapp-btn {
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
         
         /* Hero Section */
@@ -193,6 +354,21 @@
         
         .btn-secondary:hover {
             box-shadow: 0 6px 0 var(--warm-yellow);
+        }
+        
+        .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: white;
+            box-shadow: 0 4px 0 #1da851;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #1da851;
+            box-shadow: 0 6px 0 #1a9548;
         }
         
         /* Section Common Styles */
@@ -733,6 +909,27 @@
             border: none;
         }
         
+        /* WhatsApp Contact Section */
+        .whatsapp-contact {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(76, 175, 80, 0.1));
+            border-radius: 15px;
+            border-left: 5px solid var(--whatsapp-green);
+        }
+        
+        .whatsapp-contact h4 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .whatsapp-contact p {
+            margin-bottom: 20px;
+            color: var(--medium-text);
+        }
+        
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--primary-green), var(--light-green));
@@ -796,7 +993,7 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
-        /* Responsive Design */
+        /* ========== RESPONSIVE DESIGN ========== */
         @media (max-width: 992px) {
             .about-content, .contact-container {
                 grid-template-columns: 1fr;
@@ -806,17 +1003,76 @@
             .hero h2 {
                 font-size: 2.5rem;
             }
+            
+            /* Adjust navigation for tablets */
+            .nav-list {
+                gap: 5px;
+            }
+            
+            .nav-list a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            /* Hide desktop WhatsApp button on tablet */
+            .whatsapp-btn.desktop {
+                display: none;
+            }
+            
+            /* Show floating WhatsApp on tablet */
+            .floating-whatsapp {
+                display: block;
+            }
         }
         
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
+            /* Mobile Navigation */
+            .mobile-menu-btn {
+                display: block;
+                order: 3;
             }
             
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+            .logo {
+                order: 1;
+            }
+            
+            nav {
+                order: 2;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+            
+            .nav-list a {
+                padding: 15px 20px;
+                font-size: 1.1rem;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-list a:hover {
+                background: linear-gradient(135deg, var(--warm-yellow), var(--gold-yellow));
             }
             
             .hero h2 {
@@ -831,30 +1087,58 @@
                 font-size: 1.5rem;
             }
             
-            .mobile-menu {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            /* Hide desktop WhatsApp button on mobile */
+            .whatsapp-btn.desktop {
+                display: none;
+            }
+            
+            /* Show floating WhatsApp on mobile */
+            .floating-whatsapp {
                 display: block;
-                position: absolute;
-                top: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-content {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .logo-text p {
+                font-size: 0.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+                margin: 5px;
+            }
+            
+            .floating-whatsapp {
+                bottom: 20px;
                 right: 20px;
             }
             
-            nav {
-                display: none;
-                width: 100%;
-                margin-top: 15px;
-            }
-            
-            nav.active {
-                display: block;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .section-title {
-                font-size: 2rem;
+            .floating-whatsapp .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
             }
         }
         
@@ -893,7 +1177,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="#home" class="logo">
                     <div class="logo-img">
                         <img src="logo.png" alt="Mulugo Day Care Logo">
                     </div>
@@ -901,13 +1185,15 @@
                         <h1>Mulugo Day Care Centre</h1>
                         <p>Protea Glen Ext 13, Soweto</p>
                     </div>
-                </div>
-                <div class="mobile-menu">
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#vision">Vision & Mission</a></li>
                         <li><a href="#programs">Programs</a></li>
@@ -915,10 +1201,29 @@
                         <li><a href="#enrollment">Enrollment</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                    
+                    <!-- Desktop WhatsApp Button -->
+                    <a href="https://wa.me/27718181751?text=Hello%20Mulugo%20Day%20Care%20Centre,%20I%20would%20like%20to%20inquire%20about%20enrollment" 
+                       class="whatsapp-btn desktop" 
+                       target="_blank" 
+                       title="Chat with us on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="whatsapp-text">Chat with us</span>
+                    </a>
                 </nav>
             </div>
         </div>
     </header>
+
+    <!-- Floating WhatsApp Button for Mobile -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/27718181751?text=Hello%20Mulugo%20Day%20Care%20Centre,%20I%20would%20like%20to%20inquire%20about%20enrollment" 
+           class="whatsapp-btn" 
+           target="_blank" 
+           title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -930,6 +1235,11 @@
                 <div>
                     <a href="#contact" class="btn">Enrol Now</a>
                     <a href="#programs" class="btn btn-secondary">View Programs</a>
+                    <a href="https://wa.me/27718181751?text=Hello%20Mulugo%20Day%20Care%20Centre,%20I%20would%20like%20to%20inquire%20about%20enrollment" 
+                       class="btn btn-whatsapp" 
+                       target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
@@ -941,10 +1251,7 @@
             <h2 class="section-title animate-on-scroll">About Mulugo Day Care Centre</h2>
             <p class="section-subtitle animate-on-scroll">Providing exceptional early childhood education since our establishment</p>
             
-            <div class="handbook-notice animate-on-scroll">
-                This website summarizes key information from the official <strong>Mulugo Day Care Centre Parent Handbook 2025-2026</strong>
-            </div>
-            
+                        
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
                     <h3>Nurturing Young Minds in Protea Glen</h3>
@@ -955,9 +1262,10 @@
                     <div class="contact-info-box">
                         <h4>Centre Information</h4>
                         <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 14444/44 Mogohlo Street, Protoa Glen Ext 13, Soweto, 1818</p>
-                        <p><i class="fas fa-phone"></i> <strong>Contact:</strong> 073 838 3751</p>
-                        <p><i class="fas fa-user-tie"></i> <strong>Principal:</strong> Irene Merukaduvha</p>
+                        <p><i class="fas fa-phone"></i> <strong>Contact:</strong> 071 818 1751</p>
+                        <p><i class="fas fa-user-tie"></i> <strong>Principal:</strong> Irene Mafukaduvha</p>
                         <p><i class="fas fa-envelope"></i> <strong>Email:</strong> Mulugodaycare@gmail.com</p>
+                        <p><i class="fab fa-whatsapp" style="color: var(--whatsapp-green);"></i> <strong>WhatsApp:</strong> 071 818 1751</p>
                     </div>
                 </div>
                 <div class="about-image animate-on-scroll">
@@ -1412,12 +1720,7 @@
                 </div>
             </div>
             
-            <div class="handbook-notice animate-on-scroll" style="margin-top: 40px;">
-                <h4 style="margin-bottom: 10px;">Banking Details</h4>
-                <p><strong>Bank:</strong> FNB | <strong>Account:</strong> 62909500656 | <strong>Name:</strong> Mulugo Day Care Creche</p>
-                <p><strong>Reference:</strong> Child's name and surname</p>
-            </div>
-        </div>
+                   </div>
     </section>
 
     <!-- Parent Involvement Section -->
@@ -1469,8 +1772,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <p><strong>Phone Numbers:</strong></p>
-                            <p>073 838 3751 (Centre)</p>
-                            <p>071 818 1751 (Support)</p>
+                            <p>071 818 1751</p>
                         </div>
                     </div>
                     
@@ -1486,7 +1788,7 @@
                         <i class="fas fa-user-tie"></i>
                         <div>
                             <p><strong>Principal:</strong></p>
-                            <p>Irene Merukaduvha</p>
+                            <p>Irene Mafukaduvha</p>
                         </div>
                     </div>
                     
@@ -1500,8 +1802,15 @@
                         </ul>
                     </div>
                     
-                    <div style="margin-top: 30px;">
-                        <a href="#enrollment" class="btn" style="display: block; text-align: center;">Start Enrollment Process</a>
+                    <!-- WhatsApp Contact Box -->
+                    <div class="whatsapp-contact">
+                        <h4><i class="fab fa-whatsapp"></i> Quick WhatsApp Inquiry</h4>
+                        <p>Have a question? Chat with us instantly on WhatsApp!</p>
+                        <a href="https://wa.me/27718181751?text=Hello%20Mulugo%20Day%20Care%20Centre,%20I%20would%20like%20to%20inquire%20about%20enrollment" 
+                           class="btn btn-whatsapp" 
+                           target="_blank">
+                            <i class="fab fa-whatsapp"></i> Message us on WhatsApp
+                        </a>
                     </div>
                 </div>
                 
@@ -1529,6 +1838,9 @@
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/27718181751" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -1546,17 +1858,12 @@
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <p><i class="fas fa-map-marker-alt"></i> 14444/44 Mogohlo Street, Protea Glen Ext 13, Soweto, 1818</p>
-                    <p><i class="fas fa-phone"></i> 073 838 3751 (Centre)</p>
-                    <p><i class="fas fa-phone"></i> 071 818 1751 (Support)</p>
+                    <p><i class="fab fa-whatsapp"></i> 071 818 1751</p>
                     <p><i class="fas fa-envelope"></i> Mulugodaycare@gmail.com</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri: 7:30 AM - 4:00 PM</p>
                 </div>
                 
-                <div class="footer-column">
-                    <h3>Acknowledgement</h3>
-                    <p>This website summarizes key information from the official <strong>Mulugo Day Care Centre Parent Handbook 2025-2026</strong>.</p>
-                    <p>All policies and procedures are subject to the official handbook provided to enrolled families.</p>
-                </div>
+               
             </div>
             
             <div class="copyright">
@@ -1567,14 +1874,27 @@
 
     <script>
         // Mobile Menu Toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
         
         // Close mobile menu when clicking a link
-        document.querySelectorAll('nav a').forEach(link => {
+        document.querySelectorAll('.nav-list a').forEach(link => {
             link.addEventListener('click', function() {
-                document.querySelector('nav').classList.remove('active');
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                
+                // Update active state
+                document.querySelectorAll('.nav-list a').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                this.classList.add('active');
             });
         });
         
@@ -1599,7 +1919,7 @@
         window.addEventListener('scroll', checkScroll);
         
         // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a, .btn').forEach(link => {
+        document.querySelectorAll('.nav-list a, .btn').forEach(link => {
             link.addEventListener('click', function(e) {
                 if (this.getAttribute('href').startsWith('#')) {
                     e.preventDefault();
@@ -1619,16 +1939,17 @@
         
         // Highlight current section in navigation
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
+        const navLinks = document.querySelectorAll('.nav-list a');
         
         window.addEventListener('scroll', function() {
             let current = '';
+            const scrollPosition = window.scrollY + 100;
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 
-                if (scrollY >= (sectionTop - 150)) {
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     current = section.getAttribute('id');
                 }
             });
@@ -1639,6 +1960,11 @@
                     link.classList.add('active');
                 }
             });
+            
+            // Handle home page
+            if (scrollPosition < 200) {
+                document.querySelector('.nav-list a[href="#home"]').classList.add('active');
+            }
         });
     </script>
 </body>
